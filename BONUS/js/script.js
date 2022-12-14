@@ -84,4 +84,43 @@ next.addEventListener('click', function(){
 
 
 
+//BONUS 2
+let autoPlay;
+autoPlay = setInterval(auto, 3000);
+//2.- definisco funzione che fa scorrere le immagini( uso codice già presente da vecchio esercizio )
+function auto(){
+    //verifico l'elemento attivo (itemActive)
+ 
+  //incremento il suo valore di 1
+ itemActive++;
+ if(itemActive == imagesArray.length){
+  itemActive = 0;
+ }
+//aggiungere la class active al nuovo elemento dell'array items e la vado a rimuovere da quello precedente
+  //stessa cosa per i cerchi
+ if(itemActive == 0){
+  items[imagesArray.length-1].classList.remove('active');
+  circle[imagesArray.length-1].classList.remove('active')
+ }
+ else{
+  items[itemActive-1].classList.remove('active');
+  circle[itemActive-1].classList.remove('active');
+ }
+ items[itemActive].classList.add('active')
+ circle[itemActive].classList.add('active');
+ 
+ 
 
+
+}
+//BONUS 3
+document.getElementById('play').addEventListener('click', function(){
+    autoPlay = setInterval(auto, 3000);
+
+    
+})
+document.getElementById('stop').addEventListener('click', function(){
+    clearInterval(autoPlay);
+
+    
+})
