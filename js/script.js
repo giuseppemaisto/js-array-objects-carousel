@@ -42,7 +42,7 @@ for(let i = 0; i<imagesArray.length; i++){
 
     
 }
-
+//inserisco immagini in container
 const itemSlider = document.querySelector('.item-slider');
 itemSlider.innerHTML += itemsContent; 
 
@@ -67,8 +67,7 @@ next.addEventListener('click', function(){
    if(itemActive == imagesArray.length){
     itemActive = 0;
    }
- //aggiungere la class active al nuovo elemento dell'array items e la vado a rimuovere da quello precedente
-    //stessa cosa per i cerchi
+
    if(itemActive == 0){
     items[imagesArray.length-1].classList.remove('active');
     circle[imagesArray.length-1].classList.remove('active')
