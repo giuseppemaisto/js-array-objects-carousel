@@ -43,6 +43,7 @@
 
 .item{
     display: none;
+    position: relative;
 }
 
 .item-slider, .item, img{
@@ -52,6 +53,20 @@
 .item img{
     width: 100%;
     object-fit: cover;
+}
+h3{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    color: red;
+}
+p{
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    color: white;
 }
 
 .arrow{
